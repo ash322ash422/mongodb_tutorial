@@ -11,4 +11,4 @@ Once you clicked edit, it should have opened another tab called "Edit environmen
 Once you clicked "New" it should have added a place where you can put the filepath to the "mongosh.exe" file, put the file path, and hit enter.
 Then press "ok" at the bottom left, to confirm the changes.
 In the "Environment Variables" tab, press "ok" in the bottom left to finalize the process.
-###################################################################################################
+#################################################################
