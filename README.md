@@ -56,6 +56,8 @@ db.students.find() : Show all Rows/documents in a Collection students
 
 db.students.find().pretty() : Show all Rows in a Collection (Prettified)
 
+db.students.find().count() : count all students 
+
 db.students.find().sort({name:1}) : sort by name desc. order ...use -1 for asc. order
 
 db.students.find().limit(2) : Show 2 Rows/documents in a Collection students
@@ -71,3 +73,12 @@ db.students.find({}, {_id: False, name: True}) : return all doc. but only show n
 db.students.find({isMale: False}, {_id: False, name: True, DOB: True} ) show all docu. where male=False and display only names and DOB
 
 db.students.updateOne({name:'Ash'},  { $set:{ht:25} }   ) : For name 'Ash', update ht to 25
+
+db.students.updateOne({name:'Ash'},  { $unset:{ht:''} }   ) : For name 'Ash', remove ht 
+
+db.students.updateOne({_id:ObjectId},  { $set:{ht:25} }   ) : For certain object ID, update ht to 25
+
+db.students.updateMany({},  { $set:{favColor:null} }   ) : create new field and set its value to  null
+
+db.students.updateMany({favColor:{$exists:False}},  { $set:{favColor:'blue'} }   ) : anyone who does not have fav. color, set their fav color to blue
+
