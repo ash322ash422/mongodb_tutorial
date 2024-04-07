@@ -23,7 +23,7 @@ In the "Environment Variables" tab, press "ok" in the bottom left to finalize th
 
 c) If u use Visual Studio editor, then install extension 'MongoDB for VS Code'. On LHS, click the mongodb icon. 
 
-
+d) To use python to connect with mongoDB: pip install pymongo
 COMMON COMMANDS:
 cls : clear screen
 
