@@ -1,6 +1,10 @@
 # mongodb_tutorial
  Tutorial on MongoDB
+ a) Download MongoDB from www.mongodb.com : Resources -> Server... -> On LHS click 'Installation' -> On RHS , choose your option...
 
+b) Also download Mongosh from same site. Its a zipped file.
+
+######################################
 Steps to get command 'mongosh' working from  command line:
  
 1)Get the filepath to the "mongosh.exe" file (The file path without the "\mongosh.exe" at the end, so it should look something like this: "...\mongosh-1.10.6-win32-x64\bin").
