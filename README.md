@@ -41,20 +41,33 @@ db.createCollection('students') : make sure u are in  school database to create 
 
 db.students.drop() : drop collection named students.
 
-db.students.insertOne({ name: 'Bob', age: 28, score: 5.2, isMale: True, DOB: new Date('2001-01-25')}) : Insert One Row
+db.students.insertOne({ name: 'Bob', ht: 28, score: 5.2, isMale: True, DOB: new Date('2001-01-25')}) : Insert One Row
 
-db.students.insertOne({ name: 'Bob', age: 28, score: 5.2, isMale: True, DOB: new Date('2001-01-25'),
+db.students.insertOne({ name: 'Kat', ht: 28, score: 5.2, isMale: False, DOB: new Date('2001-01-25'),
                         graDate:null, courses:['chemistry','physics'],
                         address: {HouseNo: 123, city: 'New York'}}) : Insert One Row
 
-db.comments.insertMany([{ name: 'Tom', age: 28, score: 5.2, isMale: True, DOB: new Date('2001-01-25')},
-                        { name: 'Jim', age: 50, score: 7.2, isMale: True, DOB: new Date('2001-01-25')},
-                        { name: 'Ash', age: 26, score: 1.2, isMale: True, DOB: new Date('2001-01-25')}])
+db.students.insertMany([{ name: 'Tom', ht: 28, score: 5.2, isMale: True, DOB: new Date('2001-01-25')},
+                        { name: 'Jim', ht: 30, score: 7.2, isMale: True, DOB: new Date('2002-01-25')},
+                        { name: 'Ash', ht: 26, score: 1.2, isMale: True, DOB: new Date('2006-01-25')}])
 
 
-db.students.find() : Show all Rows in a Collection students
+db.students.find() : Show all Rows/documents in a Collection students
 
 db.students.find().pretty() : Show all Rows in a Collection (Prettified)
 
-db.comments.findOne({name: 'Bob'}) : Find the first row matching the object
+db.students.find().sort({name:1}) : sort by name desc. order ...use -1 for asc. order
 
+db.students.find().limit(2) : Show 2 Rows/documents in a Collection students
+
+db.students.findOne({name: 'Bob'}) : Find the first row matching the object
+
+db.students.find({name: 'Bob'}) 
+
+db.students.find({isMale: False}) 
+
+db.students.find({}, {_id: False, name: True}) : return all doc. but only show name field
+
+db.students.find({isMale: False}, {_id: False, name: True, DOB: True} ) show all docu. where male=False and display only names and DOB
+
+db.students.updateOne({name:'Ash'},  { $set:{ht:25} }   ) : For name 'Ash', update ht to 25
