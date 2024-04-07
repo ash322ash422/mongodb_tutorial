@@ -1,5 +1,5 @@
 # mongodb_tutorial
- Tutorial on MongoDB
+ 
  a) Download MongoDB from www.mongodb.com : Resources -> Server... -> On LHS click 'Installation' -> On RHS , choose your option...
 
 b) Also download Mongosh from same site. Its a zipped file, so you have to  unzip it and follow steps listed below to get command 'mongosh'
@@ -28,4 +28,33 @@ COMMON COMMANDS:
 cls : clear screen
 
 exit: exit the shell
+
+show dbs : show databases
+
+use dbName : Create a new or switch databases ...e.g. 'use school'
+
+db.dropDatabase() : delete DB
+
+show collections : show all coll.
+
+db.createCollection('students') : make sure u are in  school database to create this collection 
+
+db.students.drop() : drop collection named students.
+
+db.students.insertOne({ name: 'Bob', age: 28, score: 5.2, isMale: True, DOB: new Date('2001-01-25')}) : Insert One Row
+
+db.students.insertOne({ name: 'Bob', age: 28, score: 5.2, isMale: True, DOB: new Date('2001-01-25'),
+                        graDate:null, courses:['chemistry','physics'],
+                        address: {HouseNo: 123, city: 'New York'}}) : Insert One Row
+
+db.comments.insertMany([{ name: 'Tom', age: 28, score: 5.2, isMale: True, DOB: new Date('2001-01-25')},
+                        { name: 'Jim', age: 50, score: 7.2, isMale: True, DOB: new Date('2001-01-25')},
+                        { name: 'Ash', age: 26, score: 1.2, isMale: True, DOB: new Date('2001-01-25')}])
+
+
+db.students.find() : Show all Rows in a Collection students
+
+db.students.find().pretty() : Show all Rows in a Collection (Prettified)
+
+db.comments.findOne({name: 'Bob'}) : Find the first row matching the object
 
