@@ -2,7 +2,8 @@
  Tutorial on MongoDB
  a) Download MongoDB from www.mongodb.com : Resources -> Server... -> On LHS click 'Installation' -> On RHS , choose your option...
 
-b) Also download Mongosh from same site. Its a zipped file.
+b) Also download Mongosh from same site. Its a zipped file, so you have to  unzip it and follow steps listed below to get command 'mongosh'
+working from command line.
 
 ######################################
 Steps to get command 'mongosh' working from  command line:
@@ -19,3 +20,12 @@ Once you clicked "New" it should have added a place where you can put the filepa
 Then press "ok" at the bottom left, to confirm the changes.
 In the "Environment Variables" tab, press "ok" in the bottom left to finalize the process.
 #################################################################
+
+c) If u use Visual Studio editor, then install extension 'MongoDB for VS Code'. On LHS, click the mongodb icon. 
+
+
+COMMON COMMANDS:
+cls : clear screen
+
+exit: exit the shell
+
