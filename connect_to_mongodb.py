@@ -19,10 +19,8 @@ print(myclient.list_database_names())
 
 dblist = myclient.list_database_names()
 db = "mydatabase"
-if db in dblist:
-    print(db," database exists.")
-else:
-    print(db, " database does not exist")
+if db in dblist: print(db," database exists.")
+else: print(db, " database does not exist")
 print("222222222222222 Success here 22222222222222")
 
 CONNECTION_STRING = 'mongodb://localhost:27017'
