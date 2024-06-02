@@ -1,5 +1,6 @@
 # mongodb_tutorial
- 
+ NOTE: I am using python3.12
+
  a) Download MongoDB from www.mongodb.com : Resources -> Server... -> On LHS click 'Installation' -> On RHS , choose your option...
 
 b) Also download Mongosh from same site. Its a zipped file, so you have to  unzip it and follow steps listed below to get command 'mongosh'
